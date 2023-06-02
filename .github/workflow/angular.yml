@@ -23,7 +23,7 @@ jobs:
         npm install
         npm run build
     - name: make zip file 
-      run: zip -r angular.zip dist/  
+      run: zip -r aangular.zip dist/  
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
@@ -45,5 +45,5 @@ jobs:
           username: ${{secrets.USER}}
           key: ${{secrets.KEY}}
           port: ${{secrets.PORT}}
-          source: "angular.zip"
+          source: "aangular.zip"
           target: "/var/www/html/angular-app/"
